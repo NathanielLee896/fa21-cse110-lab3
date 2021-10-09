@@ -1,94 +1,212 @@
 <!DOCTYPE html>
-<html lang=”english”>
+<html lang="en">
     <head>
-        <title>HTML Practice for Lab 2</title>
-        <meta name="author" content="Nathaniel Lee">
-        <meta name="date" content="10/3/2021">
-    </head>
-    <body>
-        <header>
-        <div style="border: 3px solid black"><h1><b>Nathan Lee's Meeting Notes for CSE 110</b></h1></div>
-        <main>This is the user page of Nathaniel Lee for the class of CSE 110. This page consists of meeting notes, 
-              team information, and project documentation for the majority of the class. 
-        </main>
-        </header>
-        <nav>
-            <a href="#top">Top</a>
-            <a href="#bottom">Bottom</a>
-        </nav>
-        <section><h2>Team Members and Group Information</h2></section>
-        <hr>
-        <section><h2>Brainstorming Ideas for Project</h2></section>
-        <hr>
-        <section> <h2>Daily Check Ins</h2>
-            <ul>
-                <ol>Team Lead: <i>Nathan Lee</i></ol>
-                <ol>Team Lead: <i>Name</i></ol>
-                <ol>Team Member: <b>Name</b></ol>
-                <ol>Team Member: <b>Name</b></ol>
-                <ol>Team Member: <b>Name</b></ol>
-                <ol>Team Member: <b>Name</b></ol>
-                <ol>Team Member: <b>Name</b></ol>
-                <ol>Team Member: <b>Name</b></ol>
-            </ul></section>
-            <hr>
-        <section><h2>Meeting 0: <input type="date" id="date" name="Date"></h2>
+        <title>HTML Practice in Lab 2</title>
+        <meta name="keywords" content="HTML">
+        <link rel="stylesheet" href="cssexternal.css">
+        <style>
+            /* this is the style for many different elements in my html file */
+            @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
             
-            <ul>
-                <li><h3>Meeting Overview and Goals</h3></li>
-                <ul> 
-                    <li> <p>This meeting covers <em>general introductions</em> of group members to each other. Also getting an idea of
-                            a <strong>team name</strong> and some more general information about each other.
-                    </p></li>
-                </ul>  
-                <li><h3>Meeting Ending and Future Milestones</h3></li>
-                <ul>
-                    <li><p> We covered introductions and some ideas of what the project should be like considering everyone's
-                            opinons. 
-                            <br>We figured out that the next thing we need to work on is to figure out the team name and 
-                            possibly advice from TAs to see if we are in the right direction.  
-                    </p></li>
-                    <li><p>New Topic/Business: What usage this project will bring and is it possible to finish in the given 
-                            time frame.
-                    </p></li>
-                </ul>
-                <li><h3>Diagram of Current Progress: </h3></li>
-                <ul>    </ul>
+            .wrapper {
+                overflow:auto;
+            }
 
-            </ul>
-               </section>
-               <hr>
-        <section><h2>Project Design Documentation</h2>
+            #main {
+                margin-left: 4px;
+            }
+
+            #leftsidebar {
+                float: none; 
+                width: auto;
+            }   
+
+            #menulist {
+                margin: 0;
+                padding: 0;
+            }
+
+            #menu-item {
+                background:turquoise;
+                border: 1px solid #256;
+                border-radius: 4px;
+                list-style-type: none;
+                margin: 5px;
+                padding: 3px;
+            }
+
+            @media screen and (min-width: 400px) {
+                #leftsidebar {width: 200px; float: left;} 
+                #main{margin-left: 216px;}
+            }
+
+            a:hover, a:hover {
+                color:seagreen;
+            }
+
+            .flex-container {
+                display: flex;
+                flex-direction: column;
+                grid-template-columns: auto auto auto;
+                background-color:thistle;
+                padding: 10px;
+            }
+            .flex-item {
+                order: 5;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color:tomato;
+                padding: 10px;
+            }
+            .grid-item {
+                align-self: start;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            * {
+                background-color:whitesmoke;
+            }
+
+            a[target] {
+                background-color:salmon;
+            }
+
+            /* descendant combin */
+            div div {
+                background-color:palevioletred;
+            }
+
+            /*child combin */
+            main > p {
+                background-color:mediumslateblue;
+            }
+
+            /*adjacent combin */
+            li + li {
+                background-color:maroon;
+            }
+
+            /* general sib */
+            h2 ~ p {
+                background-color:lawngreen;
+            }
+
+            /* combining two selectors */
+            div.flex-item {
+                background-color:hotpink;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <header><b>Nathaniel Lee's Lab 2 Meeting Minutes</b></header>
+        <main>
+            <p style="position: static;">This is the <i>main page</i> for the meeting minutes involving Nathaniel Lee</p>
+            <p><strong>This is for the CSE 110 Lab 2 class.</strong></p>
+            <p style="display: none;">This is a secret message: I am Batman.</p>
+        </main>
+
+        <hr>
+
+        <h1>Team Members</h1>
+        <ol>
+            <li><em>Nathaniel Lee</em></li>
+        </ol>
+
+        <hr>
+
+        <div class="flex-container">Hello, how are you doing today>
+            <div class="flex-item">Good</div>
+            <div class="flex-item">Meh</div>
+            <div class="flex-item">bad</div>
+        </div>
+
+        <hr>
+
+        <div class="grid-container">What are your favorite coding languages?
+            <div class="grid-item">Java</div>
+            <div class="grid-item">Python</div>
+            <div class="grid-item">C</div>
+        </div>
+
+        <hr>
+
+        <h1 style="color: #AAA;">Possible Team Names</h1>
+        <ul>
+            <li style="background-color:rgb(255, 0, 0);"> Awesome Possums</li>
+            <li style="background-color:hsl(136, 100, 50);">Company Coders</li>
+            <li style="background-color:orange;">FAANG Wannabes</li>
+        </ul>
+
+        <h1>Meeting Discussion</h1>
+        <section>
+            <h2>9/3/2021</h2>
+            <p style="display: block;">Today we talked about how to do the Lab 2 and tried to figure out the best approach for the project.</p>
+            <p style="display: inline-block;">We also decided that our team name would be Awesome Possums</p>
+            <p>We also today decided to work together with Nathan Lee for our Lab 3 and make him do all the work.</p>
         </section>
-       
         
-    <details>
-        <summary>Details</summary>
-        This includes the necessary requirements for the Lab 2 assignment for reviewing and understanding HTML
-    </details>
-    <form action="/action_page.php">
-        <label for="fname">Type anything:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-      </form> 
-    </form>
-    <button>The Useless Button</button>
-    <form>
-        <fieldset>
-            <legend>Choose your starter pokemon type</legend>
-            <input type="radio" id="fire" name="pokemon">
-            <label for="fire">Fire</label></fieldset><br>
+        <hr>
 
-            <input type="checkbox" id="water" name="pokemon">
-            <label for="water">Water</label></fieldset><br>
+        <div>This class is starting to ramp up along with all my other classes. Wish me luck!</div>
+        <input type="button" value="Good Luck">
 
-            <input type="radio" id="grass" name="pokemon">
-            <label for="grass">grass</label></fieldset><br>
+        <hr>
 
-            <input type="radio" id="grass" name="pokemon">
-            <label for="grass">grass</label></fieldset><br>
-        </fieldset>
-    </form>
-        
-        
+        <div class="wrapper">
+            <div id="leftsidebar">
+                <ul id="menulist">
+                    <li class="menuitem">Hamburger</li>
+                    <li class="menuitem">Cheeseburger</li>
+                    <li class="menuitem">Lettuce Wrap</li>
+                    <li class="menuitem">Whopper</li>
+                    <li class="menuitem">Big Mac</li>
+                    <li class="menuitem">Cowboy Burger</li>
+                </ul>
+            </div>
+            <div id="main">
+                <h1> Burger Menu.</h1>
+                <p>Try to see which one you like and if you don't like any of these, unfortunately we are out of stock.</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="README.md" target="_blank">README</a> 
+        </nav>
+
+        <details>
+            <summary>Summary of Lab 2</summary>
+            <p>Really cool lab that I was unfortunately unable to complete. Got to learn HTML which is pretty cool.</p>
+        </details>
+
+        <footer>
+            <p>Author: Nathaniel Lee<br>
+            <a href="mailto:n3lee@ucsd.edu">n3lee@ucsd.edu</a></p>
+        </footer>
+
+        <h3>Misc Fun Stuff</h3>
+        <form action="/action_page.php">
+            <label for="first">First Name:</label><br>
+            <input type="text" id="first" name="first" value="first name input">
+            <br>
+            <label for="last">Last Name:</label><br>
+            <input type="text" id="last" name="last" value="last name input">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
     </body>
 </html>
