@@ -1,0 +1,62 @@
+header {
+    font-size: 60px;
+    padding: 15px 15px 15px 15px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+}
+main {
+    font-size: 13pt;
+    line-height: 1pc;
+    margin: auto;
+}
+p {
+    font-size: 20px;
+    line-height: 2em;
+    line-height: 2ex;
+    margin: 25px 50px 75px 100px;
+    display: inline;
+    font-family: "Birthstone", cursive;
+}
+li {
+    font-size: 0.75rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display:block;
+}
+div {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family: 
+}
+ul{
+    border-style: dotted;
+    border-color:orchid;
+    border-width: 20px;
+    border-radius: 2px;
+}
+text {
+    color: purple;
+    text-decoration: rebeccapurple;
+    text-align: left;
+}
+h1 {
+    height: 70px;
+    width:auto;
+    max-width: 200px;
+    min-width: 10px;
+}
+
+@media screen and (min-width: 400px) {
+    #rightsidebad {width: 200px; float: left;} 
+    #main{margin-right: 216px;}
+}
+
+#rightsidebar {
+    float: none; 
+    width: auto;
+}
