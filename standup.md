@@ -32,6 +32,10 @@
 - I need to focus on ... feature/design so that I can move on to ... feature/design
 - I believe we need to work more on the design so that in the end we can finish on time.
   
-
+## Ending Standup Notes
+- Things to keep in mind
+  - Features are what is going to either kill or help this project
+  - Simple and working is infinitly times better than complex and not working
+- Understand that it is okay to ask for help and this is encouraged.
 
 
